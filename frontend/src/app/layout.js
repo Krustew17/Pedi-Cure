@@ -3,6 +3,9 @@ import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 
+import PromoBanner from "@/components/PromoBanner/promoBanner";
+import Header from "@/components/Header/header";
+
 const montserrat = Montserrat({ subsets: ["latin"] });
 config.autoAddCss = false;
 
@@ -14,7 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <PromoBanner />
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
