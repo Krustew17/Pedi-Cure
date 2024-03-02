@@ -1,6 +1,6 @@
 .promoBanner {
-    background-color:  #121212;
-    padding: 10px 25px;
+    background-color: #121212;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     color: white;
@@ -9,15 +9,16 @@
 .promoBanner ul {
     display: flex;
     align-items: center;
-    gap: 20px;
-    list-style: none;
+    gap: 10px;
+    flex-direction: column-reverse;
+    text-align: center;
+    width: 100%;
 }
 
 .promoBanner li {
     cursor: pointer;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    gap: 5px;
     transition: color 0.3s;
     font-size: 14px;
     letter-spacing: .3px;
@@ -27,19 +28,8 @@
     color: #FF69B4;
 }
 
-.promoBanner li:not(:last-child)::after {
-    content: "";
-    margin-left: 10px;
-    height: 25px;
-    width: 0.5px;
-    background-color: white;
-    display: block;
-}
-
 .facebook {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
     width: 30px;
     height: 30px;
     border: 1px solid white;
@@ -53,4 +43,36 @@
     border-color: #FF69B4;
     transform: scale(1.1);
     opacity: 0.9;
+}
+
+@media screen and (min-width: 768px) {
+    .promoBanner {
+        padding: 10px 25px;
+    }
+
+    .promoBanner ul {
+        gap: 20px;
+        flex-direction: row;
+        text-align: start;
+    }
+
+    .promoBanner li {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .promoBanner li:not(:last-child)::after {
+        content: "";
+        margin-left: 10px;
+        height: 25px;
+        width: 0.5px;
+        background-color: white;
+        display: block;
+    }
+
+    .facebook {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
