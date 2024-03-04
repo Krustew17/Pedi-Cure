@@ -1,10 +1,4 @@
 import Link from 'next/link'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faPhone,
-    faLocationDot
-} from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import styles from "./promoBanner.module.css";
 
 export default function PromoBanner() {
@@ -12,9 +6,6 @@ export default function PromoBanner() {
         <div className={styles.promoBanner}>
             <ul>
                 <li>
-                    <FontAwesomeIcon
-                        icon={faPhone}
-                    />
                     <Link
                         href={"tel:0899609998"}
                     >    
@@ -22,9 +13,6 @@ export default function PromoBanner() {
                     </Link>
                 </li>
                 <li>
-                    <FontAwesomeIcon
-                        icon={faLocationDot}
-                    />
                     <Link
                         href={"https://www.google.com/maps/place/%D0%9C%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%B8+%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80+-+%D0%B3%D1%80.%D0%AF%D0%BC%D0%B1%D0%BE%D0%BB+Pedi-Cure/@42.4844303,26.5120893,17z/data=!3m1!4b1!4m6!3m5!1s0x40a635008fb442d1:0xa3deb76af5d830f0!8m2!3d42.4844303!4d26.5120893!16s%2Fg%2F11khqjnzp4?hl=bg&entry=ttu"}
                         target='_blank'
@@ -38,7 +26,6 @@ export default function PromoBanner() {
                 target='_blank'
                 className={styles.facebook}
             >
-                <FontAwesomeIcon icon={faFacebookF} />
             </Link>
         </div>
     )

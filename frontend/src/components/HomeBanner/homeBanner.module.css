@@ -3,5 +3,28 @@
     background-size: cover;
     background-position: center;
     width: 100vw;
-    min-height: 500px;
+    aspect-ratio: 1440 / 560;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bannerText {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bannerHeading {
+    color: #FF66C4;
+    font-size: 57px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.bannerSubheading {
+    margin-top: 30px;
+    color: #121212;
+    font-size: 30px;
+    font-weight: 500;
 }
