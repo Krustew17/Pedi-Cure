@@ -14,9 +14,8 @@ class LogModel(models.Model):
         verbose_name='Price'
     )
     
-    creation_date = models.DateTimeField(
-        auto_now_add=True,
-    )
+    procedure_date_day = models.DateField()
+    procedure_day_hours = models.TimeField()
     
     comment = models.TextField(
         null=True,
