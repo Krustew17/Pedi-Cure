@@ -7,6 +7,7 @@ from PediCure.common.models import LogModel
 # Create your views here.
 
 
+# 127.0.0.1:8000/api/logs/create
 @api_view(['POST'])
 def create_log(request):
     if request.method == 'POST':
@@ -18,6 +19,8 @@ def create_log(request):
         return Response(stautss=status.HTTP_400_BAD_REQUEST)
     
 
+
+#127.0.0.1:8000/api/logs/get
 @api_view(['GET'])
 def get_logs(request):
     if request.method == 'GET':
