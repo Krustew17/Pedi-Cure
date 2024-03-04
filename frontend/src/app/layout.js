@@ -1,13 +1,10 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
 
 import PromoBanner from "@/components/PromoBanner/promoBanner";
 import Header from "@/components/Header/header";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
-config.autoAddCss = false;
 
 export const metadata = {
   title: "Create Next App",
