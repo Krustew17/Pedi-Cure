@@ -6,7 +6,7 @@
 }
 
 .headerHome {
-    background-color: rgba(255, 255, 255, .4);
+    background-color: transparent;
     width: 100%;
     position: absolute;
 }
@@ -17,8 +17,7 @@
     gap: 10px;
     font-size: 18px;
     font-weight: bold;
-    color: #023E3F;
-    
+    color: var(--color-secondary);
 }
 
 .navigation ul {
@@ -30,7 +29,7 @@
 .navigation ul li {
     text-transform: uppercase;
     font-weight: 600;
-    color: #023E3F;
+    color: var(--color-black);
     position: relative;
     padding: 13px 20px;
     cursor: pointer;
@@ -51,5 +50,5 @@
 }
 
 .navigation ul li:hover:before {
-    border: 3px solid #023E3F;
+    border: 3px solid var(--color-black);
 }

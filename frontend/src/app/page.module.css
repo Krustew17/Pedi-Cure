@@ -5,3 +5,18 @@
   align-items: center;
   min-height: 100vh;
 }
+
+.welcomeContainer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.welcomeContainer > div {
+  flex-basis: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .welcomeContainer {
+    flex-direction: row;
+  }
+}

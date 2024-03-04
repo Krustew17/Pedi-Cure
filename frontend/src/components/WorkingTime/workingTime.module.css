@@ -1,0 +1,31 @@
+.container {
+    padding: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.heading {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.workingTimeItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.workingTimeItem span {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.workingTimeItem p {}
