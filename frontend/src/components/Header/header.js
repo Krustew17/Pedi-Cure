@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MdExpandMore } from "react-icons/md";
-
+import { SlMenu } from "react-icons/sl";
 import { usePathname } from "next/navigation";
 
 import styles from "./header.module.css";
@@ -14,9 +14,12 @@ export default function Header() {
 
     return (
         <header className={`${styles.header} ${isHomePage ? styles.headerHome : ''}`}>
+            <button className={styles.mobileNavButton}>
+                <SlMenu size={25} />
+            </button>
             <Link className={styles.logo} href="/">
                 <Image src="/logo.png" width={40} height={55} alt="logo" />
-                Pedi-Cure
+                <span>Pedi-Cure</span>
             </Link>
             <nav className={styles.navigation}>
                 <ul className={styles.navigationList}>
