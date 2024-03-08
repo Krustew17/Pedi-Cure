@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center;
     width: 100vw;
-    aspect-ratio: 1440 / 780;
+    aspect-ratio: 1 / 1.2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,11 +13,12 @@
     max-width: 1260px;
     width: 100%;
     margin: 0 auto;
+    padding: 30px;
 }
 
 .bannerHeading {
     color: var(--color-primary);
-    font-size: 57px;
+    font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -25,7 +26,22 @@
 .bannerSubheading {
     margin-top: 30px;
     color: var(--color-black);
-    font-size: 30px;
+    font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .banner {
+        aspect-ratio: 1440 / 780;
+    }
+    
+
+    .bannerHeading {
+        font-size: 57px;
+    }
+
+    .bannerSubheading {
+        font-size: 30px;
+    }
 }
