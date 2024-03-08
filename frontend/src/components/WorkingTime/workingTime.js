@@ -21,6 +21,13 @@ export default function WorkingTime() {
                         <p>10:00ч.–19:00ч.</p>
                     </div>
                 </li>
+                <li className={styles.workingTimeItem}>
+                    <FaRegClock size={25}/>
+                    <div>
+                        <span>Неделя</span>
+                        <p>Почивен ден</p>
+                    </div>
+                </li>
             </ul>
         </div>
     )
