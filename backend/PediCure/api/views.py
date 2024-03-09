@@ -4,6 +4,7 @@ from .serializers import logSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from PediCure.common.models import LogModel
+import json
 # Create your views here.
 
 
@@ -28,4 +29,16 @@ def get_logs(request):
         serializer = logSerializer(logs, many=True)
         return Response(serializer.data)
     return Response(status=status.HTTP_400_BAD_REQUEST)
-        
+
+
+@api_view(['GET'])
+def get_html(request, slug):
+    to_return = ""
+    if request.method == 'GET':
+        with open('./html.json', 'r') as file:
+            data = json.load(file)
+            json_data = json.dumps(data)
+            json_data = json.loads(json_data)
+            to_return = json_data[str(slug)]
+        file.close()
+        return Response({'data': to_return})
