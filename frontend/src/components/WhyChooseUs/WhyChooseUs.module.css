@@ -1,0 +1,111 @@
+.WhyChooseUsSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    align-content: center;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.WhyChooseUsSection .WhyChooseUsH1 {
+    color: var(--color-black);
+    font-size: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    align-self: flex-start;
+}
+
+.WhyChooseUsSection .WhyChooseUsH2 {
+    color: var(--color-primary);
+    margin-bottom: 5rem;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    font-weight: 200;
+}
+
+.ArticleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.ArticleContainer:last-child {
+    margin-top: 4rem;
+}
+
+.ArticleContainer h1 {
+    font-weight: 500;
+    font-size: 2rem;
+    color: rgb(54, 54, 54);
+}
+
+.ArticleContainer p {
+    font-size: 1.2rem;
+    color: rgb(87, 87, 87);
+}
+
+.iconStyle {
+    color: var(--color-secondary);
+    font-size: 2rem;
+    align-self: center;
+    text-align: center;
+}
+
+.WhyChooseUsArticle {
+    flex-basis: 47%;
+    text-align: center;
+}
+
+@media screen and (max-width: 630px) {
+    .WhyChooseUsSection .WhyChooseUsH1 {
+        font-size: 4rem;
+    }
+
+    .WhyChooseUsSection .WhyChooseUsH2 {
+        font-size: 2.5rem;
+    }
+    .WhyChooseUsArticle h1 {
+        font-size: 1.5rem;
+    }
+
+    .WhyChooseUsArticle p {
+        font-size: 1rem;
+    }
+
+    .WhyChooseUsSection {
+        padding: 2rem;
+    }
+
+    .WhyChooseUsArticle {
+        flex-basis: 100%;
+    }
+
+    .ArticleContainer {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    .WhyChooseUsArticle {
+        margin-bottom: 4rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .WhyChooseUsSection .WhyChooseUsH1 {
+        font-size: 3.5rem;
+    }
+
+    .WhyChooseUsSection .WhyChooseUsH2 {
+        font-size: 1.7rem;
+    }
+    .WhyChooseUsArticle h1 {
+        font-size: 1rem;
+    }
+
+    .WhyChooseUsArticle p {
+        font-size: 0.6rem;
+    }
+}
