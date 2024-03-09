@@ -1,22 +1,30 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .welcomeContainer {
-  display: flex;
-  flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .welcomeContainer > div {
-  flex-basis: 50%;
+    flex-basis: 50%;
+}
+
+.WhyChooseUsContainer {
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media screen and (min-width: 768px) {
-  .welcomeContainer {
-    flex-direction: row;
-  }
+    .welcomeContainer {
+        flex-direction: row;
+    }
 }
