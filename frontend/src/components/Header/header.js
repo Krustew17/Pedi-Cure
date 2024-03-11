@@ -2,9 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useCallback, useState, useRef } from "react";
 import { MdExpandMore } from "react-icons/md";
 import { SlMenu } from "react-icons/sl";
 import { usePathname } from "next/navigation";
+
+import MobileNav from './MobileNav';
+import { NAV_LINKS } from "@/utils/constants";
+
+import { useOnClickOutside } from "@/hooks";
 
 import styles from "./header.module.css";
 
@@ -12,9 +18,19 @@ export default function Header() {
     //TODO: Make responsive for mobile
     const isHomePage = usePathname() === '/';
 
+    const mobileNavRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false);
+
+
+    const handleMobileMenu = useCallback(() => {
+        setIsOpen((prev) => !prev);
+    }, [setIsOpen]);
+
+    useOnClickOutside(mobileNavRef, handleMobileMenu);
+
     return (
         <header className={`${styles.header} ${isHomePage ? styles.headerHome : ''}`}>
-            <button className={styles.mobileNavButton}>
+            <button className={styles.mobileNavButton} onClick={handleMobileMenu}>
                 <SlMenu size={25} />
             </button>
             <Link className={styles.logo} href="/">
@@ -23,21 +39,28 @@ export default function Header() {
             </Link>
             <nav className={styles.navigation}>
                 <ul className={styles.navigationList}>
-                    <li>За нас</li>
-                    <li>Контакти</li>
-                    <li className={styles.itemDropdown}>
-                        Профилактика на проблемни стъпала
-                        <MdExpandMore />
-                        <ul className={styles.itemDropdownSubmenu}>
-                            <li>Гъбички</li>
-                            <li>Впити нокти</li>
-                            <li>Хиперкератоза</li>
-                            <li>Кератодермия</li>
-                            <li>Онихолиза</li>
-                        </ul>
-                    </li>
+                    {NAV_LINKS?.map(({ content, href, subLinks = [] }) => {
+                        return (
+                            <li key={content} className={`${subLinks.length > 0 ? styles.itemDropdown : ""}`}>
+                                {content}
+                                {subLinks.length ? (
+                                    <>
+                                        <MdExpandMore />
+                                        <ul className={styles.itemDropdownSubmenu}>
+                                            {subLinks.map(({ content: subLinkContent, href: subLinkHref }) =>
+                                                <li key={subLinkContent}>{subLinkContent}</li>
+                                            )}
+                                        </ul>
+                                    </>
+                                ) : ''}
+                            </li>
+                        )
+                    })}
                 </ul>
             </nav>
+            {isOpen && (
+                <MobileNav ref={mobileNavRef} links={NAV_LINKS}/>
+            )}
         </header>
     )
 };
