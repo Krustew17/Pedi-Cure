@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import InfoBlock from "@/components/InfoBlock/infoBlock";
 import WorkingTime from "@/components/WorkingTime/workingTime";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
-
+import Benefits from "@/components/Benefits/Benefits";
 export default function Home() {
     return (
         <>
@@ -16,6 +16,7 @@ export default function Home() {
                 <div className={styles.WhyChooseUsContainer}>
                     <WhyChooseUs />
                 </div>
+                <Benefits />
             </main>
         </>
     );
