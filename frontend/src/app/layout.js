@@ -3,6 +3,7 @@ import "./globals.css";
 
 import PromoBanner from "@/components/PromoBanner/promoBanner";
 import Header from "@/components/Header/header";
+import BackToTop from "@/components/BackToTop/backToTop";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body className={montserrat.className}>
         <PromoBanner />
         <Header />
+        <BackToTop />
         {children}
       </body>
     </html>

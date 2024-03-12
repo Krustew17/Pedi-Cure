@@ -54,9 +54,8 @@
 .BenefitsHireUs {
     color: var(--color-black);
     background-color: transparent;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     border: 2px solid var(--color-black);
-    border-radius: 10rem;
     padding: 0.5rem 5rem;
     transition-duration: 0.3s;
 }
