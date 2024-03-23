@@ -2,14 +2,24 @@
     background-color: var(--color-black);
     color: var(--color-white);
     text-align: center;
-    padding: 85px;
+    padding: 70px 25px;
 }
 
 .heading {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 30px;
 }
 
 .container p:not(:last-child) {
     margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .heading {
+        font-size: 40px;
+    }
+
+    .container {
+        padding: 85px;
+    }
 }

@@ -7,10 +7,11 @@ import { MdExpandMore } from "react-icons/md";
 import { SlMenu } from "react-icons/sl";
 import { usePathname } from "next/navigation";
 
-import MobileNav from './MobileNav';
 import { NAV_LINKS } from "@/utils/constants";
-
 import { useOnClickOutside } from "@/hooks";
+
+import Logo from "../Logo/logo";
+import MobileNav from './MobileNav';
 
 import styles from "./header.module.css";
 
@@ -20,7 +21,6 @@ export default function Header() {
 
     const mobileNavRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
-
 
     const handleMobileMenu = useCallback(() => {
         setIsOpen((prev) => !prev);
@@ -33,10 +33,7 @@ export default function Header() {
             <button className={styles.mobileNavButton} onClick={handleMobileMenu}>
                 <SlMenu size={25} />
             </button>
-            <Link className={styles.logo} href="/">
-                <Image src="/logo.png" width={40} height={55} alt="logo" />
-                <span>Pedi-Cure</span>
-            </Link>
+            <Logo />
             <nav className={styles.navigation}>
                 <ul className={styles.navigationList}>
                     {NAV_LINKS?.map(({ content, href, subLinks = [] }) => {
@@ -59,7 +56,7 @@ export default function Header() {
                 </ul>
             </nav>
             {isOpen && (
-                <MobileNav ref={mobileNavRef} links={NAV_LINKS}/>
+                <MobileNav ref={mobileNavRef} links={NAV_LINKS} handleClose={handleMobileMenu} />
             )}
         </header>
     )

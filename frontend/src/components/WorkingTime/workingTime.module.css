@@ -1,5 +1,5 @@
 .container {
-    padding: 85px;
+    padding: 70px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .heading {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -29,6 +29,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .container {
+        padding: 85px;
+    }
+
     .heading {
         font-size: 40px;
     }

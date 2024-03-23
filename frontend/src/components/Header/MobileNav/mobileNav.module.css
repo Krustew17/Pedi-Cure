@@ -9,7 +9,7 @@
 
 .mobileMenu {
     position: fixed;
-    background-color: var(--color-black);
+    background-color: black;
     color: var(--color-white);
     height: 100%;
     left: 0;
@@ -17,4 +17,33 @@
     width: 70%;
     max-width: 250px;
     padding: 25px 20px;
+    animation: slide-right 0.3s ease-in both;
+}
+
+.mobileMenuHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1pt solid #252525;
+}
+
+.closeButton {
+    color: lightgray;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    color: var(--color-primary);
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
